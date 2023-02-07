@@ -13,6 +13,8 @@ public class Box {
         }
     }
     public Box(int x, int y) {
+        this.x = x;
+        this.y = y;
         kindOfBox = "Конверт";
     }
     public void print () {

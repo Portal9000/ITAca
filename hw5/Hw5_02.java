@@ -6,7 +6,7 @@ public class Hw5_02 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         String stopWord = "stop";
-        int sum = 0, counter = 0;
+        double sum = 0, counter = 0;
 
         while (true) {
             System.out.println("Please enter number or stop-word:");
@@ -16,7 +16,10 @@ public class Hw5_02 {
             } else if (in.nextLine().equals(stopWord)){
                 System.out.println("Sum = " + sum);
                 System.out.println("Count = " + counter);
-                System.out.println("Avg = " + (1.0 * sum / counter));
+                if (counter == 0) {System.out.println("Avg = " + (double)0);
+                } else {
+                    System.out.println("Avg = " + (sum / counter));
+                }
                 in.close();
                 break;
             }

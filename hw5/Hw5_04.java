@@ -2,9 +2,9 @@ package by.itacademy.homework.hw5;
 
 import java.util.Scanner;
 public class Hw5_04 {
-    private static Scanner in = new Scanner(System.in);
-    private static double numberX = 0, numberY = 0, result = 0;
-    private static String action;
+    private Scanner in = new Scanner(System.in);
+    private double numberX = 0, numberY = 0, result = 0;
+    private String action;
 
     public static void main(String[] args) {
         Hw5_04 value = new Hw5_04();

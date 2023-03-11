@@ -7,13 +7,7 @@ public class Hw5_05 {
     private final static Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int size;
-        while (true) {
-            size = sizeOfMatrix();
-            if (size > 0) {
-                break;
-            }
-        }
+        int size = getMatrixSize();
         int[][] matrix1 = new int[size][size];
         int[][] matrix2 = new int[size][size];
         int[][] matrixSum = new int[size][size];
@@ -38,15 +32,18 @@ public class Hw5_05 {
         System.out.println(Arrays.deepToString(matrixSub));
         in.close();
     }
-    public static int sizeOfMatrix() {
+    public static int getMatrixSize() {
+        int size;
         while (true) {
             System.out.println("Enter the size of the Matrix (positive integer, one number).");
-            if (in.hasNext()) {
-                if (in.hasNextInt()) {
-                    return in.nextInt();
+            if (in.hasNextInt()) {
+                size = in.nextInt();
+                if (size > 0) {
+                    return size;
                 }
+            } else {
+                in.next();
             }
-            in.next();
         }
     }
     private int[][] fillingMatrix(int size, String matrixName) {

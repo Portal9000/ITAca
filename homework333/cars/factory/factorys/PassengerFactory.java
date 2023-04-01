@@ -39,7 +39,7 @@ public class PassengerFactory {
         fillPassengerStorageWithPassengerCars();
     }
 
-    public PassengerCar createCar(Model model, EngineVolume engineVolume, Color color, WheelSize wheelSize, Set<Option> options, byte passengerСapacity) {
+    public PassengerCar createPassengerCar(Model model, EngineVolume engineVolume, Color color, WheelSize wheelSize, Set<Option> options, byte passengerСapacity) {
         PassengerCar car = passengerStorage.getPassengerCarFromPassengerStorage(model, engineVolume, color, wheelSize, passengerСapacity);
         if (car != null) {
             if (car.getColor() != color) {
